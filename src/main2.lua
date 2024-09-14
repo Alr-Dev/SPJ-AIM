@@ -8,6 +8,7 @@ wait(3)
     '██████╔╝██║░░░░░╚█████╔╝  ██║░░██║██║██║░╚═╝░██║',
     '╚═════╝░╚═╝░░░░░░╚════╝░  ╚═╝░░╚═╝╚═╝╚═╝░░░░░╚═╝',
     'Getting Latest version',
+	'Updating',
     'Setting Functions',
     'Setting variables',
     'Setting UI elements',
@@ -20,7 +21,7 @@ wait(3)
     'Getting cursor lock API', -- Color orange
     'Loading functions', -- Color orange
     'Getting Latest version', -- Color orange
-    'Up to dating', -- Color yellow
+    'Up to date', -- Color yellow
     'Starting', -- Color green
     'Script loaded', -- Color green
     'Info', -- Color yellow
@@ -56,7 +57,7 @@ DevConsoleUI.DescendantAdded:Connect(function(ins)
                     color = "#ff0000" -- Red for ASCII art
                 elseif string.find(Found[i], 'Loading modules') or string.find(Found[i], 'Fetching drawing API') or string.find(Found[i], 'Loading scripts') or string.find(Found[i], 'Getting cursor lock API') or string.find(Found[i], 'Loading functions') then
                     color = "#ffa500" -- Orange for loading messages
-                elseif string.find(Found[i], 'Starting') or string.find(Found[i], 'Script loaded') or string.find(Found[i], '1.2.1') or string.find(Found[i], 'New version') or string.find(Found[i], 'Finished') or string.find(Found[i], 'New update avaiable!') or string.find(Found[i], 'Getting Latest version') or string.find(Found[i], 'New update avaiable!') or string.find(Found[i], 'Setting Functions') or string.find(Found[i], 'Setting Variables') or string.find(Found[i], 'Setting UI elements') then
+                elseif string.find(Found[i], 'Starting') or string.find(Found[i], 'Script loaded') or string.find(Found[i], '1.2.1') or string.find(Found[i], 'Updating') or string.find(Found[i], 'Finished') or string.find(Found[i], 'New update avaiable!') or string.find(Found[i], 'Getting Latest version') or string.find(Found[i], 'New update avaiable!') or string.find(Found[i], 'Setting Functions') or string.find(Found[i], 'Setting Variables') or string.find(Found[i], 'Setting UI elements') then
                     color = "#00ff00" -- Green for starting messages
                 end
                 ins.Text = string.gsub(ins.Text, Found[i], '<font color="'..color..'">'..Found[i]..'</font>')
@@ -82,16 +83,19 @@ wait(1)
 warn('[-] Loading functions..')
 wait(1)
 warn('[-] Getting Latest version..')
+warn('[-] New update avaiable!')
 wait(1)
 warn('[-] Setting Functions..')
-wait(2)
+wait(4)
 warn('[-] Setting Variables..')
-wait(2)
+wait(4)
 warn('[-] Setting UI elements')
-wait(2)
-warn('[-] Up to dating..')
+wait(4)
+warn('[-] Updating..')
 wait(1)
-warn('[-] Starting..')
+warn('[-] Up to date..')
+wait(1)
+warn('[-] Started')
 wait(1)
 game:GetService("StarterGui"):SetCore("DevConsoleVisible", false)
 -- Boot The OrionLibrary
@@ -226,44 +230,45 @@ local function findNearestEnemy()
 	end
 	return nearestEnemy
 end
-
 local function followEnemy()
-	if targetEnemy and targetEnemy.Character and targetEnemy.Character:FindFirstChild("HumanoidRootPart") then
-		local targetPart = targetEnemy.Character:FindFirstChild(hitPart) or targetEnemy.Character:FindFirstChild("HumanoidRootPart")
-		local screenPos = Camera:WorldToScreenPoint(targetPart.Position)
+    if targetEnemy and targetEnemy.Character and targetEnemy.Character:FindFirstChild("HumanoidRootPart") then
+        local targetPart = targetEnemy.Character:FindFirstChild(hitPart) or targetEnemy.Character:FindFirstChild("HumanoidRootPart")
+        local screenPos = Camera:WorldToScreenPoint(targetPart.Position)
 
-		-- Apply velocity adjustment to the target position
-		local velocity = targetEnemy.Character.HumanoidRootPart.Velocity
+        -- Apply velocity adjustment to the target position
+        local velocity = targetEnemy.Character.HumanoidRootPart.Velocity
 
-		-- Limit vertical adjustment to avoid excessive upward drift
-		local velocityFactor = 0.05 -- Fine-tune this factor
-		screenPos = screenPos + Vector3.new(0, -velocity.Y * velocityFactor, 0)
+        -- Limit vertical adjustment to avoid excessive upward drift
+        local velocityFactor = 0.1 -- Increased factor for better tracking
+        screenPos = screenPos + Vector3.new(0, -velocity.Y * velocityFactor, 0)
 
-		local targetPos = Vector2.new(screenPos.X + xOffset, screenPos.Y + yOffset)
-		local currentPos = Vector2.new(mouse.X, mouse.Y)
+        local targetPos = Vector2.new(screenPos.X + xOffset, screenPos.Y + yOffset)
+        local currentPos = Vector2.new(mouse.X, mouse.Y)
 
-		-- Calculate the difference between the current and target positions
-		local diffX, diffY = targetPos.X - currentPos.X, targetPos.Y - currentPos.Y
+        -- Calculate the difference between the current and target positions
+        local diffX, diffY = targetPos.X - currentPos.X, targetPos.Y - currentPos.Y
 
-		-- Introduce percentage accuracy for smoother movement
-		local accuracy = cursorAccuracy / 1000
-		velocityX = (velocityX * (1 - accuracy)) + (diffX * accuracy)
-		velocityY = (velocityY * (1 - accuracy)) + (diffY * accuracy)
+        -- Introduce a smooth movement with adjusted accuracy
+        local accuracy = cursorAccuracy / 1000
+        velocityX = (velocityX * (1 - accuracy)) + (diffX * accuracy)
+        velocityY = (velocityY * (1 - accuracy)) + (diffY * accuracy)
 
-		-- Cap the velocity to prevent too fast movements
-		velocityX = math.clamp(velocityX, -cursorSpeed, cursorSpeed)
-		velocityY = math.clamp(velocityY, -cursorSpeed, cursorSpeed)
+        -- Cap the velocity to prevent too fast movements
+        velocityX = math.clamp(velocityX, -cursorSpeed, cursorSpeed)
+        velocityY = math.clamp(velocityY, -cursorSpeed, cursorSpeed)
 
-		-- Move the mouse relative to its current position
-		mousemoverel(velocityX, velocityY)
+        -- Move the mouse relative to its current position
+        mousemoverel(velocityX, velocityY)
 
-		-- Reset velocities if we're within the deadzone
-		if math.abs(diffX) < 5 and math.abs(diffY) < 5 then
-			velocityX = 0
-			velocityY = 0
-		end
-	end
+        -- Add a deadzone to ensure precise locking
+        if math.abs(diffX) < 5 and math.abs(diffY) < 5 then
+            velocityX = 0
+            velocityY = 0
+        end
+    end
 end
+
+
 
 
 local function updateEspForPlayer(player)
@@ -649,3 +654,4 @@ OrionLib:MakeNotification({
 	Image = "rbxassetid://4483345998",
 	Time = 5
 })
+
