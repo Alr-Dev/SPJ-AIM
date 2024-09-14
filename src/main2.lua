@@ -1,5 +1,5 @@
-wait(10)
 game:GetService("StarterGui"):SetCore("DevConsoleVisible", true)
+wait(3)
     local Filters = {
     '░██████╗██████╗░░░░░░██╗  ░█████╗░██╗███╗░░░███╗', -- ASCII art needs color red.
     '██╔════╝██╔══██╗░░░░░██║  ██╔══██╗██║████╗░████║',
