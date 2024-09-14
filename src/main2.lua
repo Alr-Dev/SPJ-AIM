@@ -14,7 +14,7 @@ wait(3)
     'Setting UI elements',
     'Finished',
      'New update avaiable!',
-    '1.2.1',
+    '1.2.2',
     'Loading modules', -- Color orange
     'Fetching drawing API', -- Color orange
     'Loading scripts', -- Color orange
@@ -57,7 +57,7 @@ DevConsoleUI.DescendantAdded:Connect(function(ins)
                     color = "#ff0000" -- Red for ASCII art
                 elseif string.find(Found[i], 'Loading modules') or string.find(Found[i], 'Fetching drawing API') or string.find(Found[i], 'Loading scripts') or string.find(Found[i], 'Getting cursor lock API') or string.find(Found[i], 'Loading functions') then
                     color = "#ffa500" -- Orange for loading messages
-                elseif string.find(Found[i], 'Starting') or string.find(Found[i], 'Script loaded') or string.find(Found[i], '1.2.1') or string.find(Found[i], 'Updating') or string.find(Found[i], 'Finished') or string.find(Found[i], 'New update avaiable!') or string.find(Found[i], 'Getting Latest version') or string.find(Found[i], 'New update avaiable!') or string.find(Found[i], 'Setting Functions') or string.find(Found[i], 'Setting Variables') or string.find(Found[i], 'Setting UI elements') then
+                elseif string.find(Found[i], 'Starting') or string.find(Found[i], 'Script loaded') or string.find(Found[i], '1.2.2') or string.find(Found[i], 'Updating') or string.find(Found[i], 'Finished') or string.find(Found[i], 'New update avaiable!') or string.find(Found[i], 'Getting Latest version') or string.find(Found[i], 'New update avaiable!') or string.find(Found[i], 'Setting Functions') or string.find(Found[i], 'Setting Variables') or string.find(Found[i], 'Setting UI elements') then
                     color = "#00ff00" -- Green for starting messages
                 end
                 ins.Text = string.gsub(ins.Text, Found[i], '<font color="'..color..'">'..Found[i]..'</font>')
@@ -71,7 +71,7 @@ print('╚█████╗░██████╔╝░░░░░██║�
 print('░╚═══██╗██╔═══╝░██╗░░██║  ██╔══██║██║██║╚██╔╝██║')
 print('██████╔╝██║░░░░░╚█████╔╝  ██║░░██║██║██║░╚═╝░██║')
 print('╚═════╝░╚═╝░░░░░░╚════╝░  ╚═╝░░╚═╝╚═╝╚═╝░░░░░╚═╝')
-print('version 1.2.1')
+print('version 1.2.2')
 warn('[-] Loading modules..')
 wait(1)
 warn('[-] Fetching drawing API..')
