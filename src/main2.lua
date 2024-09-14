@@ -1,4 +1,68 @@
--- Script Header
+wait(3)
+    local Filters = {
+    '░██████╗██████╗░░░░░░██╗  ░█████╗░██╗███╗░░░███╗', -- ASCII art needs color red.
+    '██╔════╝██╔══██╗░░░░░██║  ██╔══██╗██║████╗░████║',
+    '╚█████╗░██████╔╝░░░░░██║  ███████║██║██╔████╔██║',
+    '░╚═══██╗██╔═══╝░██╗░░██║  ██╔══██║██║██║╚██╔╝██║',
+    '██████╔╝██║░░░░░╚█████╔╝  ██║░░██║██║██║░╚═╝░██║',
+    '╚═════╝░╚═╝░░░░░░╚════╝░  ╚═╝░░╚═╝╚═╝╚═╝░░░░░╚═╝',
+    'Getting Latest version',
+    'Setting Functions',
+    'Setting variables',
+    'Setting UI elements',
+    'Finished',
+     'New update avaiable!',
+    '1.2.1',
+    'Loading modules', -- Color orange
+    'Fetching drawing API', -- Color orange
+    'Loading scripts', -- Color orange
+    'Getting cursor lock API', -- Color orange
+    'Loading functions', -- Color orange
+    'Getting Latest version', -- Color orange
+    'Up to dating', -- Color yellow
+    'Starting', -- Color green
+    'Script loaded', -- Color green
+    'Info', -- Color yellow
+    'Instances', -- Color yellow
+    'Variables', -- Color yellow
+    'ModuleScripts', -- Color yellow
+    'Functions', -- Color yellow
+    'UI elements', -- Color yellow
+    'Closing in', -- Color yellow
+};
+
+local CoreGui = game:GetService('CoreGui')
+local DevConsoleUI = CoreGui.DevConsoleMaster.DevConsoleWindow.DevConsoleUI
+
+local function FindString(str)
+    local Found = {}
+    for i = 1, #Filters do
+        if string.find(str, Filters[i]) then
+            table.insert(Found, Filters[i])
+        end
+    end
+    return Found
+end
+
+DevConsoleUI.DescendantAdded:Connect(function(ins)
+    if ins:IsA('TextLabel') then
+        local Found = FindString(ins.Text)
+        if #Found ~= 0 then
+            ins.RichText = true
+            for i = 1, #Found do
+                local color = "#e8f31d" -- Default color (yellow)
+                if string.find(Found[i], '░██████╗██████╗░░░░░░██╗') or string.find(Found[i], '██╔════╝██╔══██╗░░░░░██║') or string.find(Found[i], '╚█████╗░██████╔╝░░░░░██║') or string.find(Found[i], '░╚═══██╗██╔═══╝░██╗░░██║') or string.find(Found[i], '██████╔╝██║░░░░░╚█████╔╝') or string.find(Found[i], '╚═════╝░╚═╝░░░░░░╚════╝░') then
+                    color = "#ff0000" -- Red for ASCII art
+                elseif string.find(Found[i], 'Loading modules') or string.find(Found[i], 'Fetching drawing API') or string.find(Found[i], 'Loading scripts') or string.find(Found[i], 'Getting cursor lock API') or string.find(Found[i], 'Loading functions') then
+                    color = "#ffa500" -- Orange for loading messages
+                elseif string.find(Found[i], 'Starting') or string.find(Found[i], 'Script loaded') or string.find(Found[i], '1.2.1') or string.find(Found[i], 'New version') or string.find(Found[i], 'Finished') or string.find(Found[i], 'New update avaiable!') or string.find(Found[i], 'Getting Latest version') or string.find(Found[i], 'New update avaiable!') or string.find(Found[i], 'Setting Functions') or string.find(Found[i], 'Setting Variables') or string.find(Found[i], 'Setting UI elements') then
+                    color = "#00ff00" -- Green for starting messages
+                end
+                ins.Text = string.gsub(ins.Text, Found[i], '<font color="'..color..'">'..Found[i]..'</font>')
+            end
+        end
+    end
+end)
 print('░██████╗██████╗░░░░░░██╗  ░█████╗░██╗███╗░░░███╗')
 print('██╔════╝██╔══██╗░░░░░██║  ██╔══██╗██║████╗░████║')
 print('╚█████╗░██████╔╝░░░░░██║  ███████║██║██╔████╔██║')
@@ -8,31 +72,26 @@ print('╚═════╝░╚═╝░░░░░░╚════╝░�
 print('version 1.2.1')
 game:GetService("StarterGui"):SetCore("DevConsoleVisible", true)
 warn('[-] Loading modules..')
-wait(5)
+wait(1)
 warn('[-] Fetching drawing API..')
-wait(5)
+wait(1)
 warn('[-] Loading scripts..')
-wait(5)
+wait(1)
 warn('[-] Getting cursor lock API..')
-wait(5)
+wait(1)
 warn('[-] Loading functions..')
-wait(5)
+wait(1)
 warn('[-] Getting Latest version..')
-wait(5)
-print('[!] Script loaded.')
-print('Info:')
-print('{')
-print('-- Instances: 7')
-print('-- Variables: 39')
-print('-- ModuleScripts: 1')
-print('-- Functions: 17')
-print('-- UI elements: 21')
-print('}')
-warn('Closing in.. 3')
-wait(3)
-warn('.. 2')
+wait(1)
+warn('[-] Setting Functions..')
 wait(2)
-warn('.. 1')
+warn('[-] Setting Variables..')
+wait(2)
+warn('[-] Setting UI elements')
+wait(2)
+warn('[-] Up to dating..')
+wait(1)
+warn('[-] Starting..')
 wait(1)
 game:GetService("StarterGui"):SetCore("DevConsoleVisible", false)
 -- Boot The OrionLibrary
