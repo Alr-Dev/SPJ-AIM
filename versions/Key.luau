@@ -1,2 +1,2 @@
-local validKeys = { "SPJAIM-0xP[Y<hW)'>]-_X^&Aw/1$k" }
+local validKeys = { "SPJAIM-0x!ll[R}Q}"m-6+AGBC$bga" }
 SPJAIM-0x/QjqXcqJ@V-kcc)u|J%(E
