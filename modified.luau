@@ -76,7 +76,7 @@ local drag = function(obj, latency)
 end
 
 local library = {
-    version = "2.0.2",
+    version = "1.4.3",
     title = title or "xsx " .. tostring(math.random(1,366)),
     fps = 0,
     rank = "private"
@@ -248,7 +248,7 @@ function library:Watermark(text)
     background.Name = "background"
     background.Parent = edge
     background.AnchorPoint = Vector2.new(0.5, 0.5)
-    background.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    background.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
     background.BackgroundTransparency = 1
     background.ClipsDescendants = true
     background.Position = UDim2.new(0.5, 0, 0.5, 0)
@@ -341,7 +341,7 @@ function library:Watermark(text)
         edge.Name = "edge"
         edge.Parent = watermark
         edge.AnchorPoint = Vector2.new(0.5, 0.5)
-        edge.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+        edge.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
         edge.Position = UDim2.new(0.5, 0, -0.03, 0)
         edge.Size = UDim2.new(0, 0, 0, 26)
         edge.BackgroundTransparency = 1
@@ -353,7 +353,7 @@ function library:Watermark(text)
         background.Name = "background"
         background.Parent = edge
         background.AnchorPoint = Vector2.new(0.5, 0.5)
-        background.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
+        background.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
         background.BackgroundTransparency = 1
         background.ClipsDescendants = true
         background.Position = UDim2.new(0.5, 0, 0.5, 0)
@@ -364,7 +364,7 @@ function library:Watermark(text)
     
         bar.Name = "bar"
         bar.Parent = barFolder
-        bar.BackgroundColor3 = Color3.fromRGB(159, 115, 255)
+        bar.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
         bar.BackgroundTransparency = 0
         bar.Size = UDim2.new(0, 0, 0, 1)
     
@@ -540,7 +540,7 @@ function library:InitNotifications(text, duration, callback)
     
         edge.Name = "edge"
         edge.Parent = Notifications
-        edge.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+        edge.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
         edge.BackgroundTransparency = 1.000
         edge.Size = UDim2.new(0, 0, 0, 26)
     
@@ -562,11 +562,11 @@ function library:InitNotifications(text, duration, callback)
     
         bar.Name = "bar"
         bar.Parent = barFolder
-        bar.BackgroundColor3 = Color3.fromRGB(159, 115, 255)
+        bar.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
         bar.BackgroundTransparency = 0.200
         bar.Size = UDim2.new(0, 0, 0, 1)
         if type == "notification" then
-            bar.BackgroundColor3 = Color3.fromRGB(159, 115, 255)
+            bar.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
         elseif type == "alert" then
             bar.BackgroundColor3 = Color3.fromRGB(255, 246, 112)
         elseif type == "error" then
@@ -702,7 +702,7 @@ function library:Introduction()
     edge.Name = "edge"
     edge.Parent = introduction
     edge.AnchorPoint = Vector2.new(0.5, 0.5)
-    edge.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+    edge.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
     edge.BackgroundTransparency = 1
     edge.Position = UDim2.new(0.511773348, 0, 0.5, 0)
     edge.Size = UDim2.new(0, 300, 0, 308)
@@ -734,7 +734,7 @@ function library:Introduction()
     
     bar.Name = "bar"
     bar.Parent = barFolder
-    bar.BackgroundColor3 = Color3.fromRGB(159, 115, 255)
+    bar.BackgroundColor3 = Color3.fromRGB(15255, 0, 0)
     bar.BackgroundTransparency = 0.200
     bar.Size = UDim2.new(0, 0, 0, 1)
     
@@ -778,7 +778,7 @@ function library:Introduction()
     xsx.Size = UDim2.new(0, 80, 0, 21)
     xsx.Font = Enum.Font.Code
     xsx.Text = "powered by xsx"
-    xsx.TextColor3 = Color3.fromRGB(124, 124, 124)
+    xsx.TextColor3 = Color3.fromRGB(0, 0, 0)
     xsx.TextSize = 10.000
     xsx.TextTransparency = 1
     
@@ -937,7 +937,7 @@ function library:Init(key)
 
     bar.Name = "bar"
     bar.Parent = barFolder
-    bar.BackgroundColor3 = Color3.fromRGB(159, 115, 255)
+    bar.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
     bar.BackgroundTransparency = 0.200
     bar.Size = UDim2.new(0, 592, 0, 1)
     bar.BorderSizePixel = 0
@@ -1056,7 +1056,7 @@ function library:Init(key)
         page.MidImage = "http://www.roblox.com/asset/?id=3062506202"
         page.ScrollBarThickness = 1
         page.TopImage = "http://www.roblox.com/asset/?id=3062506202"
-        page.ScrollBarImageColor3 = Color3.fromRGB(159, 115, 255)
+        page.ScrollBarImageColor3 = Color3.fromRGB(255, 0, 0)
         page.Visible = false
         
         pageLayout.Name = "pageLayout"
@@ -1074,7 +1074,7 @@ function library:Init(key)
 
         if TabLibrary.IsFirst then
             page.Visible = true
-            tabButton.TextColor3 = Color3.fromRGB(159, 115, 255)
+            tabButton.TextColor3 = Color3.fromRGB(255, 0, 0)
             TabLibrary.CurrentTab = title
         end
         
