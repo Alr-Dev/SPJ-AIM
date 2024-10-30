@@ -1,6 +1,5 @@
 --[[
   UI lib made by bungie#0001
-
 ]]
 
 -- / Locals
@@ -77,7 +76,7 @@ local drag = function(obj, latency)
 end
 
 local library = {
-    version = "1.4.3",
+    version = "2.0.2",
     title = title or "xsx " .. tostring(math.random(1,366)),
     fps = 0,
     rank = "private"
@@ -237,7 +236,7 @@ function library:Watermark(text)
     edge.Name = "edge"
     edge.Parent = watermark
     edge.AnchorPoint = Vector2.new(0.5, 0.5)
-    edge.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+    edge.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
     edge.Position = UDim2.new(0.5, 0, -0.03, 0)
     edge.Size = UDim2.new(0, 0, 0, 26)
     edge.BackgroundTransparency = 1
@@ -260,7 +259,7 @@ function library:Watermark(text)
 
     bar.Name = "bar"
     bar.Parent = barFolder
-    bar.BackgroundColor3 = Color3.fromRGB(159, 115, 255)
+    bar.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
     bar.BackgroundTransparency = 0
     bar.Size = UDim2.new(0, 0, 0, 1)
 
@@ -354,7 +353,7 @@ function library:Watermark(text)
         background.Name = "background"
         background.Parent = edge
         background.AnchorPoint = Vector2.new(0.5, 0.5)
-        background.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+        background.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
         background.BackgroundTransparency = 1
         background.ClipsDescendants = true
         background.Position = UDim2.new(0.5, 0, 0.5, 0)
