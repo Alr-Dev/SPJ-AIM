@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 --[[
   UI lib made by bungie#0001
 ]]
@@ -3572,4 +3573,5 @@ function library:Init(key)
     end
     return TabLibrary
 end
-return library
+
+
