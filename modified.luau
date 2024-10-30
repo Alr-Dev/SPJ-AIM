@@ -3569,7 +3569,7 @@ function library:Init(key)
     function TabLibrary:UpdateKeybind(new)
         new = new or key
         key = new
-        return TabLibrary
-    end
-    return TabLibrary
 end
+       return TabLibrary
+end
+return library
