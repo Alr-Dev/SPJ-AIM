@@ -200,7 +200,7 @@ function library:Watermark(text)
         end
     end
 
-    tetx = text or "xsx v2"
+    text = text or "xsx v2"
 
     local watermark = Instance.new("ScreenGui")
     local watermarkPadding = Instance.new("UIPadding")
@@ -3569,7 +3569,8 @@ function library:Init(key)
     function TabLibrary:UpdateKeybind(new)
         new = new or key
         key = new
+        return TabLibrary
+    end
+    return TabLibrary
 end
-       return TabLibrary
-end
-return library
+return TabLibrary
