@@ -1211,7 +1211,7 @@ function library:Init(key)
 
             button.Name = "button"
             button.Parent = buttonFrame
-            button.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+            button.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
             button.Size = UDim2.new(0, 396, 0, 24)
             button.AutoButtonColor = false
             button.Font = Enum.Font.SourceSans
@@ -1315,7 +1315,7 @@ function library:Init(key)
         
                     button.Name = "button"
                     button.Parent = buttonFrame
-                    button.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+                    button.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
                     button.Size = UDim2.new(0, NewSizeX - Amnt, 0, 24)
                     button.AutoButtonColor = false
                     button.Font = Enum.Font.SourceSans
@@ -1363,11 +1363,11 @@ function library:Init(key)
                         TweenService:Create(button, TweenTable["hover"], {BackgroundColor3 = Color3.fromRGB(60, 60, 60)}):Play()
                     end)
                     button.MouseLeave:Connect(function()
-                        TweenService:Create(button, TweenTable["hover"], {BackgroundColor3 = Color3.fromRGB(50, 50, 50)}):Play()
+                        TweenService:Create(button, TweenTable["hover"], {BackgroundColor3 = Color3.fromRGB(0, 0, 0)}):Play()
                     end)
         
                     button.MouseButton1Down:Connect(function()
-                        TweenService:Create(buttonLabel, TweenTable["hover"], {TextColor3 = Color3.fromRGB(159, 115, 255)}):Play()
+                        TweenService:Create(buttonLabel, TweenTable["hover"], {TextColor3 = Color3.fromRGB(255, 0, 0)}):Play()
                     end)
                     button.MouseButton1Up:Connect(function()
                         TweenService:Create(buttonLabel, TweenTable["hover"], {TextColor3 = Color3.fromRGB(190, 190, 190)}):Play()
@@ -1512,7 +1512,7 @@ function library:Init(key)
 
             rightBar.Name = "rightBar"
             rightBar.Parent = sectionFrame
-            rightBar.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+            rightBar.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
             rightBar.BorderSizePixel = 0
             rightBar.Position = UDim2.new(0.308080822, 0, 0.479166657, 0)
             rightBar.Size = UDim2.new(0, 403, 0, 1)
@@ -1589,7 +1589,7 @@ function library:Init(key)
 
             toggleEdge.Name = "toggleEdge"
             toggleEdge.Parent = toggleButton
-            toggleEdge.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+            toggleEdge.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
             toggleEdge.Size = UDim2.new(0, 18, 0, 18)
 
             toggleEdgeCorner.CornerRadius = UDim.new(0, 2)
@@ -1599,7 +1599,7 @@ function library:Init(key)
             toggle.Name = "toggle"
             toggle.Parent = toggleEdge
             toggle.AnchorPoint = Vector2.new(0.5, 0.5)
-            toggle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+            toggle.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
             toggle.Position = UDim2.new(0.5, 0, 0.5, 0)
             toggle.Size = UDim2.new(0, 16, 0, 16)
 
@@ -1607,7 +1607,7 @@ function library:Init(key)
             toggleCorner.Name = "toggleCorner"
             toggleCorner.Parent = toggle
 
-            toggleGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(34, 34, 34)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(28, 28, 28))}
+            toggleGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(28, 28, 28))}
             toggleGradient.Rotation = 90
             toggleGradient.Name = "toggleGradient"
             toggleGradient.Parent = toggle
@@ -1615,7 +1615,7 @@ function library:Init(key)
             toggleDesign.Name = "toggleDesign"
             toggleDesign.Parent = toggle
             toggleDesign.AnchorPoint = Vector2.new(0.5, 0.5)
-            toggleDesign.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+            toggleDesign.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
             toggleDesign.BackgroundTransparency = 1.000
             toggleDesign.Position = UDim2.new(0.5, 0, 0.5, 0)
 
@@ -1623,7 +1623,7 @@ function library:Init(key)
             toggleDesignCorner.Name = "toggleDesignCorner"
             toggleDesignCorner.Parent = toggleDesign
 
-            toggleDesignGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(157, 115, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(106, 69, 181))}
+            toggleDesignGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(106, 69, 181))}
             toggleDesignGradient.Rotation = 90
             toggleDesignGradient.Name = "toggleDesignGradient"
             toggleDesignGradient.Parent = toggleDesign
@@ -1783,7 +1783,7 @@ function library:Init(key)
                 keybindButtonLabel.Name = "keybindButtonLabel"
                 keybindButtonLabel.Parent = keybindBackground
                 keybindButtonLabel.AnchorPoint = Vector2.new(0.5, 0.5)
-                keybindButtonLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+                keybindButtonLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
                 keybindButtonLabel.BackgroundTransparency = 1.000
                 keybindButtonLabel.ClipsDescendants = true
                 keybindButtonLabel.Position = UDim2.new(0.5, 0, 0.5, 0)
@@ -1997,7 +1997,7 @@ function library:Init(key)
             keybindBackground.Position = UDim2.new(0.5, 0, 0.5, 0)
             keybindBackground.Size = UDim2.new(0, 85, 0, 20)
 
-            keybindGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(34, 34, 34)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(28, 28, 28))}
+            keybindGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(28, 28, 28))}
             keybindGradient.Rotation = 90
             keybindGradient.Name = "keybindGradient"
             keybindGradient.Parent = keybindBackground
@@ -2009,7 +2009,7 @@ function library:Init(key)
             keybindButtonLabel.Name = "keybindButtonLabel"
             keybindButtonLabel.Parent = keybindBackground
             keybindButtonLabel.AnchorPoint = Vector2.new(0.5, 0.5)
-            keybindButtonLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+            keybindButtonLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
             keybindButtonLabel.BackgroundTransparency = 1.000
             keybindButtonLabel.ClipsDescendants = true
             keybindButtonLabel.Position = UDim2.new(0.5, 0, 0.5, 0)
@@ -2174,7 +2174,7 @@ function library:Init(key)
     
                 textbox.Name = "textbox"
                 textbox.Parent = textboxFolder
-                textbox.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+                textbox.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
                 textbox.Size = UDim2.new(0, 133, 0, 22)
     
                 textboxLayout.Name = "textboxLayout"
@@ -2354,11 +2354,11 @@ function library:Init(key)
 
                 textBoxValues.Focused:Connect(function()
                     textBoxValues:GetPropertyChangedSignal("Text"):Connect(ResizeTextBox)
-                    TweenService:Create(textbox, TweenTable["TextBox"], {BackgroundColor3 = Color3.fromRGB(159, 115, 255)}):Play()
+                    TweenService:Create(textbox, TweenTable["TextBox"], {BackgroundColor3 = Color3.fromRGB(255, 0, 0)}):Play()
                 end)
 
                 textBoxValues.FocusLost:Connect(function()
-                    TweenService:Create(textbox, TweenTable["TextBox"], {BackgroundColor3 = Color3.fromRGB(60, 60, 60)}):Play()
+                    TweenService:Create(textbox, TweenTable["TextBox"], {BackgroundColor3 = Color3.fromRGB(0, 0, 0)}):Play()
                 end)
 
                 textBoxValues.FocusLost:Connect(function(enterPressed)
@@ -2457,7 +2457,7 @@ function library:Init(key)
 
                 textbox.Name = "textbox"
                 textbox.Parent = textboxFolder
-                textbox.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+                textbox.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
                 textbox.Size = UDim2.new(0, 396, 0, 22)
 
                 textboxLayout.Name = "textboxLayout"
@@ -2583,11 +2583,11 @@ function library:Init(key)
                 end)
 
                 textBoxValues.Focused:Connect(function()
-                    TweenService:Create(textbox, TweenTable["TextBox"], {BackgroundColor3 = Color3.fromRGB(159, 115, 255)}):Play()
+                    TweenService:Create(textbox, TweenTable["TextBox"], {BackgroundColor3 = Color3.fromRGB(255, 0, 0)}):Play()
                 end)
 
                 textBoxValues.FocusLost:Connect(function()
-                    TweenService:Create(textbox, TweenTable["TextBox"], {BackgroundColor3 = Color3.fromRGB(60, 60, 60)}):Play()
+                    TweenService:Create(textbox, TweenTable["TextBox"], {BackgroundColor3 = Color3.fromRGB(0, 0, 0)}):Play()
                 end)
 
                 textBoxValues.FocusLost:Connect(function(enterPressed)
@@ -2685,7 +2685,7 @@ function library:Init(key)
 
                 textbox.Name = "textbox"
                 textbox.Parent = textboxFolder
-                textbox.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+                textbox.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
                 textbox.Position = UDim2.new(0, 0, 0.169014081, 0)
                 textbox.Size = UDim2.new(0, 396, 0, 118)
 
@@ -2812,11 +2812,11 @@ function library:Init(key)
                 end)
 
                 textBoxValues.Focused:Connect(function()
-                    TweenService:Create(textbox, TweenTable["TextBox"], {BackgroundColor3 = Color3.fromRGB(159, 115, 255)}):Play()
+                    TweenService:Create(textbox, TweenTable["TextBox"], {BackgroundColor3 = Color3.fromRGB(255, 0, 0)}):Play()
                 end)
 
                 textBoxValues.FocusLost:Connect(function()
-                    TweenService:Create(textbox, TweenTable["TextBox"], {BackgroundColor3 = Color3.fromRGB(60, 60, 60)}):Play()
+                    TweenService:Create(textbox, TweenTable["TextBox"], {BackgroundColor3 = Color3.fromRGB(0, 0, 0)}):Play()
                 end)
 
                 textBoxValues.FocusLost:Connect(function(enterPressed)
@@ -3000,7 +3000,7 @@ function library:Init(key)
             selectorTwoLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
             selectorTwoLayout.SortOrder = Enum.SortOrder.LayoutOrder
             
-            selectorTwoGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(34, 34, 34)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(28, 28, 28))}
+            selectorTwoGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(28, 28, 28))}
             selectorTwoGradient.Rotation = 90
             selectorTwoGradient.Name = "selectorTwoGradient"
             selectorTwoGradient.Parent = selectorTwo
@@ -3015,7 +3015,7 @@ function library:Init(key)
             
             selectorContainer.Name = "selectorContainer"
             selectorContainer.Parent = selectorTwo
-            selectorContainer.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+            selectorContainer.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
             selectorContainer.BackgroundTransparency = 1.000
             selectorContainer.Size = UDim2.new(0, 394, 0, 20)
         
@@ -3042,7 +3042,7 @@ function library:Init(key)
 
                 optionButton.Name = "optionButton"
                 optionButton.Parent = selectorContainer
-                optionButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+                optionButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
                 optionButton.BackgroundTransparency = 1.000
                 optionButton.Size = UDim2.new(0, 394, 0, 20)
                 optionButton.AutoButtonColor = false
@@ -3051,7 +3051,7 @@ function library:Init(key)
                 optionButton.TextColor3 = Color3.fromRGB(160, 160, 160)
                 optionButton.TextSize = 14.000
                 if optionButton.Text == default then
-                    optionButton.TextColor3 = Color3.fromRGB(159, 115, 255)
+                    optionButton.TextColor3 = Color3.fromRGB(255, 0, 0)
                     callback(selectorText.Text)
                 end
 
@@ -3088,7 +3088,7 @@ function library:Init(key)
 
                 optionButton.Name = "optionButton"
                 optionButton.Parent = selectorContainer
-                optionButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+                optionButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
                 optionButton.BackgroundTransparency = 1.000
                 optionButton.Size = UDim2.new(0, 394, 0, 20)
                 optionButton.AutoButtonColor = false
@@ -3097,7 +3097,7 @@ function library:Init(key)
                 optionButton.TextColor3 = Color3.fromRGB(140, 140, 140)
                 optionButton.TextSize = 14.000
                 if optionButton.Text == default then
-                    optionButton.TextColor3 = Color3.fromRGB(159, 115, 255)
+                    optionButton.TextColor3 = Color3.fromRGB(255, 0, 0)
                     callback(selectorText.Text)
                 end
 
@@ -3234,7 +3234,7 @@ function library:Init(key)
 
             sliderButton.Name = "sliderButton"
             sliderButton.Parent = sliderFolder
-            sliderButton.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+            sliderButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
             sliderButton.Position = UDim2.new(0.348484844, 0, 0.600000024, 0)
             sliderButton.Size = UDim2.new(0, 396, 0, 16)
             sliderButton.AutoButtonColor = false
@@ -3249,7 +3249,7 @@ function library:Init(key)
 
             sliderBackground.Name = "sliderBackground"
             sliderBackground.Parent = sliderButton
-            sliderBackground.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+            sliderBackground.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
             sliderBackground.Size = UDim2.new(0, 394, 0, 14)
             sliderBackground.ClipsDescendants = true
 
@@ -3278,7 +3278,7 @@ function library:Init(key)
             sliderIndicatorStraint.Parent = sliderIndicator
             sliderIndicatorStraint.MaxSize = Vector2.new(392, 12)
 
-            sliderIndicatorGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(159, 115, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(128, 94, 208))}
+            sliderIndicatorGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(128, 94, 208))}
             sliderIndicatorGradient.Rotation = 90
             sliderIndicatorGradient.Name = "sliderIndicatorGradient"
             sliderIndicatorGradient.Parent = sliderIndicator
@@ -3479,7 +3479,7 @@ function library:Init(key)
 
             rightBar.Name = "rightBar"
             rightBar.Parent = sectionFrame
-            rightBar.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+            rightBar.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
             rightBar.BorderSizePixel = 0
             rightBar.Position = UDim2.new(0.308080822, 0, 0.479166657, 0)
             rightBar.Size = UDim2.new(0, 403, 0, 1)
