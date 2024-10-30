@@ -3573,4 +3573,3 @@ function library:Init(key)
     end
     return TabLibrary
 end
-return TabLibrary
